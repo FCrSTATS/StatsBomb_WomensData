@@ -1,0 +1,143 @@
+Getting Started With
+================
+
+StatsBomb Data
+--------------
+
+have recently launched itself as a data provider of event data, it's an exciting release and certainly enters the market from the off as highly competitive to Opta and others. All of the Statsbomb staff seemed to have started their careers in football analytics as a hobby via personal blogs and the Statsbomb blog itself. They know too well that access to data is one of the biggest barriers to getting involved in this fast-growing hobby and profession. So it's great to see Ted, Thom and others opening the castle gates to others instead of gleefully teasing from the turrets as they announce free data!
+
+Statsbomb have made an initial release of 9 matches of their data, what makes it better is that the data is from women's football. Making it a double good deed, free data and encouraging the development and exposure of the women's game.
+
+Getting the Data
+----------------
+
+First and foremost you must sign-up for the data, this allows Statsbomb to keep track of their release and if we abide by there request then hopefully it will enable them to release more free data. Head over to ???? to sign up.
+
+Once you sign up it will lead you to a GitHub page that will have instructions on how to install the helpful R package Statsbomb have released and get that data!
+
+But for the purposes of helping people get stuck in, I will share how I did it.
+
+The Initial Setup
+-----------------
+
+You need the latest version of R for the package to work, so I updated mine on a mac via this code - \[uncomment to use\]
+
+``` r
+## run to start with (MAC)
+# update R studeio to latest version 
+#devtools::install_github("AndreaCirilloAC/updateR")
+#library(updateR)
+#updateR(admin_password = "PASSWORD") - replace PASSWORD with your system password 
+```
+
+Then I installed the package via devtools (make sure that is installed and loaded)
+
+``` r
+# install and load the StatsBombR package
+devtools::install_github("statsbomb/StatsBombR")
+```
+
+    ## Downloading GitHub repo statsbomb/StatsBombR@master
+    ## from URL https://api.github.com/repos/statsbomb/StatsBombR/zipball/master
+
+    ## Installing StatsBombR
+
+    ## '/Library/Frameworks/R.framework/Resources/bin/R' --no-site-file  \
+    ##   --no-environ --no-save --no-restore --quiet CMD INSTALL  \
+    ##   '/private/var/folders/xl/8s0d62w940z5p1w1hxynt0yw0000gn/T/RtmpYX4JiG/devtools911ed88e3e2/statsbomb-StatsBombR-b8a3c47'  \
+    ##   --library='/Library/Frameworks/R.framework/Versions/3.5/Resources/library'  \
+    ##   --install-tests
+
+    ## 
+
+``` r
+require(StatsBombR)
+```
+
+    ## Loading required package: StatsBombR
+
+    ## Loading required package: dplyr
+
+    ## 
+    ## Attaching package: 'dplyr'
+
+    ## The following objects are masked from 'package:stats':
+    ## 
+    ##     filter, lag
+
+    ## The following objects are masked from 'package:base':
+    ## 
+    ##     intersect, setdiff, setequal, union
+
+    ## Loading required package: stringi
+
+    ## Loading required package: stringr
+
+    ## Loading required package: tibble
+
+    ## Loading required package: rvest
+
+    ## Loading required package: xml2
+
+    ## Loading required package: RCurl
+
+    ## Loading required package: bitops
+
+    ## Loading required package: doParallel
+
+    ## Loading required package: foreach
+
+    ## Loading required package: iterators
+
+    ## Loading required package: parallel
+
+    ## Loading required package: httr
+
+    ## Loading required package: jsonlite
+
+    ## Loading required package: purrr
+
+    ## 
+    ## Attaching package: 'purrr'
+
+    ## The following object is masked from 'package:jsonlite':
+    ## 
+    ##     flatten
+
+    ## The following objects are masked from 'package:foreach':
+    ## 
+    ##     accumulate, when
+
+    ## The following object is masked from 'package:rvest':
+    ## 
+    ##     pluck
+
+    ## Loading required package: SDMTools
+
+    ## Warning: replacing previous import 'foreach::accumulate' by
+    ## 'purrr::accumulate' when loading 'StatsBombR'
+
+    ## Warning: replacing previous import 'jsonlite::flatten' by 'purrr::flatten'
+    ## when loading 'StatsBombR'
+
+    ## Warning: replacing previous import 'foreach::when' by 'purrr::when' when
+    ## loading 'StatsBombR'
+
+Loop Through and Grab That Data!
+--------------------------------
+
+The StatsbombR package makes this so easy to get the data and into a format that is ready to use, other data providers take note! So to download all of the event data from the matches I simply grabbed a list of available games and then looped through each game and pulled the event data. This meant I was left with a dataframe of all events from all matches, perfect!
+
+Status Report
+-------------
+
+Just a little bit of code to run to double-check that everything went smoothly, unnecessary but handy.
+
+Ready, Set.... Go
+-----------------
+
+No we have a database (called 'events') of all actions from all matches that we can then use in our Statsbomb discovery projects moving forwards. So that we don't need to run the above code each time, I am going to save the events dataframe as an RDS file. RDS files can superquick to load and will allow to us explore the world of possibilities in nano-seconds everytime we start a project.
+
+``` r
+saveRDS(events, "SB_events_DB.RDS")
+```
