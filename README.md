@@ -7,3 +7,5 @@ Statsbomb have made an initial release of 9 matches of their data, what makes it
 This git repo will explore this free data source as we attempt to help others learn data science and football analytics. 
 
 1. [Getting Started With StatsBomb Data](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/1.GettingStartedWithStatsBombData.md)
+
+![StatsBomb Logo](https://github.com/statsbomb/open-data/blob/master/img/statsbomb-logo.jpg)
