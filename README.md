@@ -5,7 +5,11 @@ Statsbomb have recently launched itself as a data provider of event data, it's a
 Statsbomb have made an initial release of 9 matches of their data, what makes it better is that the data is from women's football. Making it a double good deed, free data and encouraging the development and exposure of the women's game. 
 
 This git repo will explore this free data source as we attempt to help others learn data science and football analytics. 
-
+### Getting Started
 1. [Getting Started With StatsBomb Data](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/1.GettingStartedWithStatsBombData.md)
+
+### The Basics 
+1. [xG Tables and dplyr Package](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/2.xG&dplyr.md)
+
 
 ![StatsBomb Logo](https://github.com/statsbomb/open-data/blob/master/img/statsbomb-logo.jpg)
