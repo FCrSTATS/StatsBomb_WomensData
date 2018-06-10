@@ -11,6 +11,6 @@ This git repo will explore this free data source as we attempt to help others le
 ### The Basics 
 1. [xG Tables and dplyr Package](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/2.xG&dplyr.md)
 2. [Creating a Statsbomb Ready Pitch with ggplot2](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/CreateAPitchForStatsBomb.md)
-
+3. [Creating a Statsbomb Ready Shot Map with ggplot2](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/3.CreateShotMaps.md)
 
 ![StatsBomb Logo](https://github.com/statsbomb/open-data/blob/master/img/statsbomb-logo.jpg)
