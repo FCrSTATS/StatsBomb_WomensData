@@ -1,12 +1,14 @@
 Building a 'Unique' Passing Model - Part 1 - Create the Underlying Mechanics
 ================
 
-Intro
+The Concept
 -----
 
-You are watching a football match, possession is being circulated around the middle in unspectacular fashion. Then all of a sudden, your central midfielder (known for his vision) gets a moment of time and hits a great pass. You know it's a great pass, it's something different, yeah it's not normal, it's..... unique. I am writing this before I set off on a coding journey to see if I can identify pass uniqueness (referred to PU from now on), the following is the documentation of the journey mistakes, tagents and hopefully successes included.
+You are watching a football match, possession is being circulated around the middle in unspectacular fashion. Then all of a sudden, your attacking midfielder (known for his vision) gets a moment of time and hits a great pass. You know it's a great pass, it's something different, yeah it's not normal, it's..... unique. 
 
 ![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/pass.png)
+
+I am writing this before I set off on a coding journey to see if I can identify pass uniqueness (referred to PU from now on), the following is Part 1 of the documentation of the journey mistakes, tagents and hopefully successes included.
 
 The Data & Setup
 ----------------
@@ -19,7 +21,7 @@ I will be using the recently released dataset from [Statsbomb](https://twitter.c
 events <- readRDS("SB_events_DB.RDS") ## an events dataframe loaded from local storage - see my previous tutorial 
 ```
 
-Enviornment
+Environment
 -----------
 
 We will be using a variety of R packages to help us with the analysis. To use a package it first needs to be installed by running install.packages("NAME\_OF\_PACKAGE") and then loading it to your session via require(NAME\_OF\_PACKAGE).
@@ -232,7 +234,7 @@ ggplot(data = findings) + geom_point(aes(x= findings$pass.length, y =  findings$
 
 ![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Unknown-6.png)
 
-Reviewing the results by eye 'Uniqueness' seems to be mainly driven by the origin and desitnation position on the pitch with passes in central areas having a lower 'Uniqueness'. The other variables seem to impact 'Uniqueness' mainly at the extremes of their ranges or not at all.
+Reviewing the results by eye 'Uniqueness' seems to be mainly driven by the origin and desitnation position on the pitch with passes in central areas having a lower 'Uniqueness'. The other variables seem to impact 'Uniqueness' mainly at the extremes of their ranges or not at all. Let's look further....
 
 #### Pass Origin and Uniqueness
 
@@ -325,12 +327,15 @@ p
 
 ![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Unknown-11.png)
 
-Other Examples
---------------
+This seems a very good match of passes! Let's try some other passes to ensure we aren't getting lucky! 
+
 ![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Unknown-12.png)
 ![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Unknown-13.png)
 ![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Unknown-14.png)
 ![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Unknown-15.png)
 ![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Unknown-16.png)
 
+So it seems we have managed to create a pass matching model via NN calculations! We now have the base mechanism which we can use to identify similar passes. This is a great start and the end to part 1. 
+
+Part 2 coming soon!
 
