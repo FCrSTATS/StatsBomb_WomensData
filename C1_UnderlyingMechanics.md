@@ -169,7 +169,7 @@ Let's create some plots to understand results of the NN analysis. Firstly, a sim
 hist(UniqueCatcher$Uniqueness, breaks = 50, main = "Histogram of Uniqueness", xlab = "Uniqueness", col = "#FF9CA2")
 ```
 
-![](Uniqueness2_files/figure-markdown_github/Histogram-1.png)
+![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Unknown.png)
 
 The histogram shows a normal distribtion of uniqueness, yet there are a few outliers at the above 7500 Next let's look at the relationship between the variables and uniqueness
 
@@ -183,7 +183,7 @@ findings <- merge(passDB, UniqueCatcher, by = "id")
 ggplot(data = findings) + geom_point(aes(x= location.x, y = Uniqueness), alpha = 0.3, colour = "#E24F55") + theme_minimal()
 ```
 
-![](Uniqueness2_files/figure-markdown_github/unnamed-chunk-8-1.png)
+![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Unknown-1.png)
 
 #### Pass Origin: location.y (Horizontal) & Uniqueness
 
@@ -192,7 +192,7 @@ ggplot(data = findings) + geom_point(aes(x= location.x, y = Uniqueness), alpha =
 ggplot(data = findings) + geom_point(aes(x= Uniqueness, y = location.y), alpha = 0.3, colour = "#E24F55") + theme_minimal()
 ```
 
-![](Uniqueness2_files/figure-markdown_github/unnamed-chunk-9-1.png)
+![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Unknown-2.png)
 
 #### Pass Destination: location.x (Vertical) & Uniqueness
 
@@ -201,7 +201,7 @@ ggplot(data = findings) + geom_point(aes(x= Uniqueness, y = location.y), alpha =
 ggplot(data = findings) + geom_point(aes(x= location.x, y = Uniqueness), alpha = 0.3, colour = "#E24F55") + theme_minimal()
 ```
 
-![](Uniqueness2_files/figure-markdown_github/unnamed-chunk-10-1.png)
+![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Unknown-3.png)
 
 #### Pass Destination: location.y (Horizontal) & Uniqueness
 
@@ -210,7 +210,7 @@ ggplot(data = findings) + geom_point(aes(x= location.x, y = Uniqueness), alpha =
 ggplot(data = findings) + geom_point(aes(x= Uniqueness, y = location.y), alpha = 0.3, colour = "#E24F55") + theme_minimal()
 ```
 
-![](Uniqueness2_files/figure-markdown_github/unnamed-chunk-11-1.png)
+![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Unknown-4.png)
 
 #### Pass Angle & Uniqueness
 
@@ -219,7 +219,7 @@ ggplot(data = findings) + geom_point(aes(x= Uniqueness, y = location.y), alpha =
 ggplot(data = findings) + geom_point(aes(x= findings$pass.angle, y =  findings$Uniqueness), alpha = 0.3, colour = "#E24F55") + theme_minimal() + xlab("Pass Angle") + ylab("Uniqueness")
 ```
 
-![](Uniqueness2_files/figure-markdown_github/unnamed-chunk-12-1.png)
+![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Unknown-5.png)
 
 #### Pass Length & Uniqueness
 
@@ -228,7 +228,7 @@ ggplot(data = findings) + geom_point(aes(x= findings$pass.angle, y =  findings$U
 ggplot(data = findings) + geom_point(aes(x= findings$pass.length, y =  findings$Uniqueness), alpha = 0.3, colour = "#E24F55") + theme_minimal() + xlab("Pass Length") + ylab("Uniqueness")
 ```
 
-![](Uniqueness2_files/figure-markdown_github/unnamed-chunk-13-1.png)
+![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Unknown-6.png)
 
 Reviewing the results by eye 'Uniqueness' seems to be mainly driven by the origin and desitnation position on the pitch with passes in central areas having a lower 'Uniqueness'. The other variables seem to impact 'Uniqueness' mainly at the extremes of their ranges or not at all.
 
@@ -242,7 +242,7 @@ p <- create_Pitch(goaltype = "barcanumbers")
 p + geom_point(data = findings, aes(x=findings$location_2p.x, y = findings$location_2p.y, colour=findings$Uniqueness), alpha = 0.5, position = "jitter", size = 2) + scale_colour_gradient(low = "white", high = "#E24F55") + theme(legend.position="none")  
 ```
 
-![](Uniqueness2_files/figure-markdown_github/unnamed-chunk-14-1.png)
+![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Unknown-7.png)
 
 #### Pass Destination and Distance
 
@@ -254,7 +254,7 @@ p <- create_Pitch(goaltype = "barcanumbers")
 p + geom_point(data = findings, aes(x=findings$pass_end.location_2p.x, y = findings$pass_end.location_2p.y, colour=findings$Uniqueness), alpha = 0.5, position = "jitter") + scale_colour_gradient(low = "white", high = "#E24F55") + theme(legend.position="none")  
 ```
 
-![](Uniqueness2_files/figure-markdown_github/unnamed-chunk-15-1.png)
+![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Unknown-8.png)
 
 At the moment I am a little worried about the bias towards passes in or into the defensive third having a high 'Uniqueness' value, mathmatically it's right but it doesn't really fit with the aims of the analysis being to identify 'unique' passers in an attacking sense. I experimented with filtering out passes in or into the defensive third and rerunning the analysis but I still wasn't happy with it. Therefore I decided to keep the initial results and attempt to make the analysis more specific to its original aims later in the process.
 
@@ -305,7 +305,7 @@ p <- create_Pitch(goaltype = "barcanumbers", padding = 1)
 p
 ```
 
-![](Uniqueness2_files/figure-markdown_github/unnamed-chunk-17-1.png)
+![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Unknown-9.png)
 
 ``` r
 ## Let's plot all of the passes in grey as a background pattern 
@@ -313,7 +313,7 @@ p
 p 
 ```
 
-![](Uniqueness2_files/figure-markdown_github/unnamed-chunk-17-2.png)
+![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Unknown-10.png)
 
 ``` r
 ## Let's plot all of the passes that are closst matches 
@@ -321,7 +321,7 @@ p <- p + geom_segment(data = pass_to_plot, aes(x = location_2p.x, y = location_2
 p 
 ```
 
-![](Uniqueness2_files/figure-markdown_github/unnamed-chunk-17-3.png)
+![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Unknown-11.png)
 
 ``` r
 ## Let's plot the random pass we have compared to all other passes 
@@ -329,192 +329,14 @@ p <- p + geom_segment(data = pass_to_plot_original, aes(x = location_2p.x, y = l
 p
 ```
 
-![](Uniqueness2_files/figure-markdown_github/unnamed-chunk-17-4.png)
+![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Unknown-12.png)
 
 Other Examples
 --------------
+![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Unknown-12.png)
+![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Unknown-13.png)
+![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Unknown-14.png)
+![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Unknown-15.png)
+![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Unknown-16.png)
 
-``` r
-## First I select a random pass from the dataset 
-RanPass <- round(runif(1, 1, nrow(normalised_data)),0)
 
-## I want to compare against a segment of the overall dataset, this figure will change as Statsbomb add more data so I calculate how much 0.1% of the dataset and also +1 for the pass itself. Finally I save it as a parameter called Pass_Select_Scope. 
-Pass_Select_Scope <- round(nrow(normalised_data) * 0.001 ,0) + 1
-
-# I then filter all passes out except the random pass that has been selected. Saving that to a dataframe on it's own called selectedPass
-selectedPass <- normalised_data[RanPass,]
-  
-## I then create two dataframes ready for NN analysis 
-Selected <- selectedPass[1:8] ## selected for the RanPass
-Base <- normalised_data[,1:8] ## Base for everything else. 
-  
-## Run the nn2 analysis comparing all passes to the selected pass. 
-nnResults <- nn2(Base, Selected, k=min(nrow(Base),nrow(Base)),treetype="bd", searchtype="standard",eps=2)
-distance <- nnResults$nn.dists[1,] ## Saving the distance output of the NN
-Pass <-  nnResults$nn.idx[1,] ## Saving the index of the NN for later analysis
-NNid <- normalised_data[Pass,]$id
-  
-## Create a database of results 
-NN_Review <- data.frame(Uniqeness = distance, id = NNid, stringsAsFactors = F)
-
-## filter just to the closest 0.1% of the pass database 
-review_passes <- NN_Review[1:Pass_Select_Scope,]
-
-## Create the pre-plotting dataframes   
- pass_to_plot <- merge(review_passes, passDB[c(1,7,13:21)], by="id")
- pass_to_plot_original <- pass_to_plot[1,]
- pass_to_plot <- pass_to_plot[-1,]
-
-## first we use the SBpitch package to create a basic pitch plot, I like the barcanumbers goaltype and I reduced padding to 1 
-create_Pitch(goaltype = "barcanumbers", padding = 1) + geom_segment(data = pass_to_plot, aes(x = location_2p.x, y = location_2p.y, xend = pass_end.location_2p.x, yend = pass_end.location_2p.y), size = 0.75, colour = "#ECAFB1") + geom_point(data = pass_to_plot, aes(x = location_2p.x, y = location_2p.y),colour = "#ECAFB1", size = 2)  + geom_segment(data = pass_to_plot_original, aes(x = location_2p.x, y = location_2p.y, xend = pass_end.location_2p.x, yend = pass_end.location_2p.y), size = 0.75, colour = "#D43B47") + geom_point(data = pass_to_plot_original, aes(x = location_2p.x, y = location_2p.y),colour = "#D43B47", size = 2) 
-```
-
-![](Uniqueness2_files/figure-markdown_github/unnamed-chunk-18-1.png)
-
-``` r
-## First I select a random pass from the dataset 
-RanPass <- round(runif(1, 1, nrow(normalised_data)),0)
-
-## I want to compare against a segment of the overall dataset, this figure will change as Statsbomb add more data so I calculate how much 0.1% of the dataset and also +1 for the pass itself. Finally I save it as a parameter called Pass_Select_Scope. 
-Pass_Select_Scope <- round(nrow(normalised_data) * 0.001 ,0) + 1
-
-# I then filter all passes out except the random pass that has been selected. Saving that to a dataframe on it's own called selectedPass
-selectedPass <- normalised_data[RanPass,]
-  
-## I then create two dataframes ready for NN analysis 
-Selected <- selectedPass[1:8] ## selected for the RanPass
-Base <- normalised_data[,1:8] ## Base for everything else. 
-  
-## Run the nn2 analysis comparing all passes to the selected pass. 
-nnResults <- nn2(Base, Selected, k=min(nrow(Base),nrow(Base)),treetype="bd", searchtype="standard",eps=2)
-distance <- nnResults$nn.dists[1,] ## Saving the distance output of the NN
-Pass <-  nnResults$nn.idx[1,] ## Saving the index of the NN for later analysis
-NNid <- normalised_data[Pass,]$id
-  
-## Create a database of results 
-NN_Review <- data.frame(Uniqeness = distance, id = NNid, stringsAsFactors = F)
-
-## filter just to the closest 0.1% of the pass database 
-review_passes <- NN_Review[1:Pass_Select_Scope,]
-
-## Create the pre-plotting dataframes   
- pass_to_plot <- merge(review_passes, passDB[c(1,7,13:21)], by="id")
- pass_to_plot_original <- pass_to_plot[1,]
- pass_to_plot <- pass_to_plot[-1,]
-
-## first we use the SBpitch package to create a basic pitch plot, I like the barcanumbers goaltype and I reduced padding to 1 
-create_Pitch(goaltype = "barcanumbers", padding = 1) + geom_segment(data = pass_to_plot, aes(x = location_2p.x, y = location_2p.y, xend = pass_end.location_2p.x, yend = pass_end.location_2p.y), size = 0.75, colour = "#ECAFB1") + geom_point(data = pass_to_plot, aes(x = location_2p.x, y = location_2p.y),colour = "#ECAFB1", size = 2)  + geom_segment(data = pass_to_plot_original, aes(x = location_2p.x, y = location_2p.y, xend = pass_end.location_2p.x, yend = pass_end.location_2p.y), size = 0.75, colour = "#D43B47") + geom_point(data = pass_to_plot_original, aes(x = location_2p.x, y = location_2p.y),colour = "#D43B47", size = 2) 
-```
-
-![](Uniqueness2_files/figure-markdown_github/unnamed-chunk-19-1.png)
-
-``` r
-## First I select a random pass from the dataset 
-RanPass <- round(runif(1, 1, nrow(normalised_data)),0)
-
-## I want to compare against a segment of the overall dataset, this figure will change as Statsbomb add more data so I calculate how much 0.1% of the dataset and also +1 for the pass itself. Finally I save it as a parameter called Pass_Select_Scope. 
-Pass_Select_Scope <- round(nrow(normalised_data) * 0.001 ,0) + 1
-
-# I then filter all passes out except the random pass that has been selected. Saving that to a dataframe on it's own called selectedPass
-selectedPass <- normalised_data[RanPass,]
-  
-## I then create two dataframes ready for NN analysis 
-Selected <- selectedPass[1:8] ## selected for the RanPass
-Base <- normalised_data[,1:8] ## Base for everything else. 
-  
-## Run the nn2 analysis comparing all passes to the selected pass. 
-nnResults <- nn2(Base, Selected, k=min(nrow(Base),nrow(Base)),treetype="bd", searchtype="standard",eps=2)
-distance <- nnResults$nn.dists[1,] ## Saving the distance output of the NN
-Pass <-  nnResults$nn.idx[1,] ## Saving the index of the NN for later analysis
-NNid <- normalised_data[Pass,]$id
-  
-## Create a database of results 
-NN_Review <- data.frame(Uniqeness = distance, id = NNid, stringsAsFactors = F)
-
-## filter just to the closest 0.1% of the pass database 
-review_passes <- NN_Review[1:Pass_Select_Scope,]
-
-## Create the pre-plotting dataframes   
- pass_to_plot <- merge(review_passes, passDB[c(1,7,13:21)], by="id")
- pass_to_plot_original <- pass_to_plot[1,]
- pass_to_plot <- pass_to_plot[-1,]
-
-## first we use the SBpitch package to create a basic pitch plot, I like the barcanumbers goaltype and I reduced padding to 1 
-create_Pitch(goaltype = "barcanumbers", padding = 1) + geom_segment(data = pass_to_plot, aes(x = location_2p.x, y = location_2p.y, xend = pass_end.location_2p.x, yend = pass_end.location_2p.y), size = 0.75, colour = "#ECAFB1") + geom_point(data = pass_to_plot, aes(x = location_2p.x, y = location_2p.y),colour = "#ECAFB1", size = 2)  + geom_segment(data = pass_to_plot_original, aes(x = location_2p.x, y = location_2p.y, xend = pass_end.location_2p.x, yend = pass_end.location_2p.y), size = 0.75, colour = "#D43B47") + geom_point(data = pass_to_plot_original, aes(x = location_2p.x, y = location_2p.y),colour = "#D43B47", size = 2) 
-```
-
-![](Uniqueness2_files/figure-markdown_github/unnamed-chunk-20-1.png)
-
-``` r
-## First I select a random pass from the dataset 
-RanPass <- round(runif(1, 1, nrow(normalised_data)),0)
-
-## I want to compare against a segment of the overall dataset, this figure will change as Statsbomb add more data so I calculate how much 0.1% of the dataset and also +1 for the pass itself. Finally I save it as a parameter called Pass_Select_Scope. 
-Pass_Select_Scope <- round(nrow(normalised_data) * 0.001 ,0) + 1
-
-# I then filter all passes out except the random pass that has been selected. Saving that to a dataframe on it's own called selectedPass
-selectedPass <- normalised_data[RanPass,]
-  
-## I then create two dataframes ready for NN analysis 
-Selected <- selectedPass[1:8] ## selected for the RanPass
-Base <- normalised_data[,1:8] ## Base for everything else. 
-  
-## Run the nn2 analysis comparing all passes to the selected pass. 
-nnResults <- nn2(Base, Selected, k=min(nrow(Base),nrow(Base)),treetype="bd", searchtype="standard",eps=2)
-distance <- nnResults$nn.dists[1,] ## Saving the distance output of the NN
-Pass <-  nnResults$nn.idx[1,] ## Saving the index of the NN for later analysis
-NNid <- normalised_data[Pass,]$id
-  
-## Create a database of results 
-NN_Review <- data.frame(Uniqeness = distance, id = NNid, stringsAsFactors = F)
-
-## filter just to the closest 0.1% of the pass database 
-review_passes <- NN_Review[1:Pass_Select_Scope,]
-
-## Create the pre-plotting dataframes   
- pass_to_plot <- merge(review_passes, passDB[c(1,7,13:21)], by="id")
- pass_to_plot_original <- pass_to_plot[1,]
- pass_to_plot <- pass_to_plot[-1,]
-
-## first we use the SBpitch package to create a basic pitch plot, I like the barcanumbers goaltype and I reduced padding to 1 
-create_Pitch(goaltype = "barcanumbers", padding = 1) + geom_segment(data = pass_to_plot, aes(x = location_2p.x, y = location_2p.y, xend = pass_end.location_2p.x, yend = pass_end.location_2p.y), size = 0.75, colour = "#ECAFB1") + geom_point(data = pass_to_plot, aes(x = location_2p.x, y = location_2p.y),colour = "#ECAFB1", size = 2)  + geom_segment(data = pass_to_plot_original, aes(x = location_2p.x, y = location_2p.y, xend = pass_end.location_2p.x, yend = pass_end.location_2p.y), size = 0.75, colour = "#D43B47") + geom_point(data = pass_to_plot_original, aes(x = location_2p.x, y = location_2p.y),colour = "#D43B47", size = 2) 
-```
-
-![](Uniqueness2_files/figure-markdown_github/unnamed-chunk-21-1.png)
-
-``` r
-## First I select a random pass from the dataset 
-RanPass <- round(runif(1, 1, nrow(normalised_data)),0)
-
-## I want to compare against a segment of the overall dataset, this figure will change as Statsbomb add more data so I calculate how much 0.1% of the dataset and also +1 for the pass itself. Finally I save it as a parameter called Pass_Select_Scope. 
-Pass_Select_Scope <- round(nrow(normalised_data) * 0.001 ,0) + 1
-
-# I then filter all passes out except the random pass that has been selected. Saving that to a dataframe on it's own called selectedPass
-selectedPass <- normalised_data[RanPass,]
-  
-## I then create two dataframes ready for NN analysis 
-Selected <- selectedPass[1:8] ## selected for the RanPass
-Base <- normalised_data[,1:8] ## Base for everything else. 
-  
-## Run the nn2 analysis comparing all passes to the selected pass. 
-nnResults <- nn2(Base, Selected, k=min(nrow(Base),nrow(Base)),treetype="bd", searchtype="standard",eps=2)
-distance <- nnResults$nn.dists[1,] ## Saving the distance output of the NN
-Pass <-  nnResults$nn.idx[1,] ## Saving the index of the NN for later analysis
-NNid <- normalised_data[Pass,]$id
-  
-## Create a database of results 
-NN_Review <- data.frame(Uniqeness = distance, id = NNid, stringsAsFactors = F)
-
-## filter just to the closest 0.1% of the pass database 
-review_passes <- NN_Review[1:Pass_Select_Scope,]
-
-## Create the pre-plotting dataframes   
- pass_to_plot <- merge(review_passes, passDB[c(1,7,13:21)], by="id")
- pass_to_plot_original <- pass_to_plot[1,]
- pass_to_plot <- pass_to_plot[-1,]
-
-## first we use the SBpitch package to create a basic pitch plot, I like the barcanumbers goaltype and I reduced padding to 1 
-create_Pitch(goaltype = "barcanumbers", padding = 1) + geom_segment(data = pass_to_plot, aes(x = location_2p.x, y = location_2p.y, xend = pass_end.location_2p.x, yend = pass_end.location_2p.y), size = 0.75, colour = "#ECAFB1") + geom_point(data = pass_to_plot, aes(x = location_2p.x, y = location_2p.y),colour = "#ECAFB1", size = 2)  + geom_segment(data = pass_to_plot_original, aes(x = location_2p.x, y = location_2p.y, xend = pass_end.location_2p.x, yend = pass_end.location_2p.y), size = 0.75, colour = "#D43B47") + geom_point(data = pass_to_plot_original, aes(x = location_2p.x, y = location_2p.y),colour = "#D43B47", size = 2) 
-```
-
-![](Uniqueness2_files/figure-markdown_github/unnamed-chunk-22-1.png)
