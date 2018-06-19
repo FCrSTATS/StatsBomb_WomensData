@@ -6,7 +6,7 @@ Intro
 
 You are watching a football match, possession is being circulated around the middle in unspectacular fashion. Then all of a sudden, your central midfielder (known for his vision) gets a moment of time and hits a great pass. You know it's a great pass, it's something different, yeah it's not normal, it's..... unique. I am writing this before I set off on a coding journey to see if I can identify pass uniqueness (referred to PU from now on), the following is the documentation of the journey mistakes, tagents and hopefully successes included.
 
-![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/uniquepassing.png)
+![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/pass.png)
 
 The Data & Setup
 ----------------
