@@ -184,7 +184,9 @@ The histogram shows a normal distribtion of uniqueness, yet there are a few outl
 findings <- merge(passDB, UniqueCatcher, by = "id")
 
 # Relationship between location.y and Uniqueness 
-ggplot(data = findings) + geom_point(aes(x= location.x, y = Uniqueness), alpha = 0.3, colour = "#E24F55") + theme_minimal()
+ggplot(data = findings) + 
+geom_point(aes(x= location.x, y = Uniqueness), alpha = 0.3, colour = "#E24F55") + 
+theme_minimal()
 ```
 
 ![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Unknown-1.png)
@@ -193,7 +195,9 @@ ggplot(data = findings) + geom_point(aes(x= location.x, y = Uniqueness), alpha =
 
 ``` r
 # Relationship between location.y and distance 
-ggplot(data = findings) + geom_point(aes(x= Uniqueness, y = location.y), alpha = 0.3, colour = "#E24F55") + theme_minimal()
+ggplot(data = findings) + 
+geom_point(aes(x= Uniqueness, y = location.y), alpha = 0.3, colour = "#E24F55") + 
+theme_minimal()
 ```
 
 ![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Unknown-2.png)
@@ -202,7 +206,9 @@ ggplot(data = findings) + geom_point(aes(x= Uniqueness, y = location.y), alpha =
 
 ``` r
 # Relationship between location.y and distance 
-ggplot(data = findings) + geom_point(aes(x= location.x, y = Uniqueness), alpha = 0.3, colour = "#E24F55") + theme_minimal()
+ggplot(data = findings) + 
+geom_point(aes(x= location.x, y = Uniqueness), alpha = 0.3, colour = "#E24F55") + 
+theme_minimal()
 ```
 
 ![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Unknown-3.png)
@@ -211,7 +217,9 @@ ggplot(data = findings) + geom_point(aes(x= location.x, y = Uniqueness), alpha =
 
 ``` r
 # Relationship between location.y and distance 
-ggplot(data = findings) + geom_point(aes(x= Uniqueness, y = location.y), alpha = 0.3, colour = "#E24F55") + theme_minimal()
+ggplot(data = findings) + 
+geom_point(aes(x= Uniqueness, y = location.y), alpha = 0.3, colour = "#E24F55") + 
+theme_minimal()
 ```
 
 ![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Unknown-4.png)
@@ -220,7 +228,11 @@ ggplot(data = findings) + geom_point(aes(x= Uniqueness, y = location.y), alpha =
 
 ``` r
 # Relationship between pass.end_location.y and distance 
-ggplot(data = findings) + geom_point(aes(x= findings$pass.angle, y =  findings$Uniqueness), alpha = 0.3, colour = "#E24F55") + theme_minimal() + xlab("Pass Angle") + ylab("Uniqueness")
+ggplot(data = findings) + 
+geom_point(aes(x= findings$pass.angle, y =  findings$Uniqueness), alpha = 0.3, colour = "#E24F55") + 
+theme_minimal() + 
+xlab("Pass Angle") + 
+ylab("Uniqueness")
 ```
 
 ![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Unknown-5.png)
@@ -229,7 +241,11 @@ ggplot(data = findings) + geom_point(aes(x= findings$pass.angle, y =  findings$U
 
 ``` r
 # Relationship between pass.end_location.y and distance 
-ggplot(data = findings) + geom_point(aes(x= findings$pass.length, y =  findings$Uniqueness), alpha = 0.3, colour = "#E24F55") + theme_minimal() + xlab("Pass Length") + ylab("Uniqueness")
+ggplot(data = findings) + 
+geom_point(aes(x= findings$pass.length, y =  findings$Uniqueness), alpha = 0.3, colour = "#E24F55") + 
+theme_minimal() + 
+xlab("Pass Length") + 
+ylab("Uniqueness")
 ```
 
 ![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Unknown-6.png)
@@ -243,7 +259,9 @@ Reviewing the results by eye 'Uniqueness' seems to be mainly driven by the origi
 p <- create_Pitch(goaltype = "barcanumbers")
 
 # x,y of event plotted with distance as shading = for pass location                 
-p + geom_point(data = findings, aes(x=findings$location_2p.x, y = findings$location_2p.y, colour=findings$Uniqueness), alpha = 0.5, position = "jitter", size = 2) + scale_colour_gradient(low = "white", high = "#E24F55") + theme(legend.position="none")  
+p + geom_point(data = findings, aes(x=findings$location_2p.x, y = findings$location_2p.y, colour=findings$Uniqueness), alpha = 0.5, position = "jitter", size = 2) + 
+scale_colour_gradient(low = "white", high = "#E24F55") + 
+theme(legend.position="none")  
 ```
 
 ![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Unknown-7.png)
@@ -255,7 +273,9 @@ p + geom_point(data = findings, aes(x=findings$location_2p.x, y = findings$locat
 p <- create_Pitch(goaltype = "barcanumbers")
 
 # x,y of event plotted with distance as shading = for pass end location                 
-p + geom_point(data = findings, aes(x=findings$pass_end.location_2p.x, y = findings$pass_end.location_2p.y, colour=findings$Uniqueness), alpha = 0.5, position = "jitter") + scale_colour_gradient(low = "white", high = "#E24F55") + theme(legend.position="none")  
+p + geom_point(data = findings, aes(x=findings$pass_end.location_2p.x, y = findings$pass_end.location_2p.y, colour=findings$Uniqueness), alpha = 0.5, position = "jitter") + 
+scale_colour_gradient(low = "white", high = "#E24F55") + 
+theme(legend.position="none")  
 ```
 
 ![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Unknown-8.png)
@@ -313,7 +333,8 @@ p
 
 ``` r
 ## Let's plot all of the passes that are closst matches 
-p <- p + geom_segment(data = pass_to_plot, aes(x = location_2p.x, y = location_2p.y, xend = pass_end.location_2p.x, yend = pass_end.location_2p.y), size = 0.75, colour = "#ECAFB1") + geom_point(data = pass_to_plot, aes(x = location_2p.x, y = location_2p.y),colour = "#ECAFB1", size = 2) 
+p <- p + geom_segment(data = pass_to_plot, aes(x = location_2p.x, y = location_2p.y, xend = pass_end.location_2p.x, yend = pass_end.location_2p.y), size = 0.75, colour = "#ECAFB1") + 
+geom_point(data = pass_to_plot, aes(x = location_2p.x, y = location_2p.y),colour = "#ECAFB1", size = 2) 
 p 
 ```
 
@@ -321,7 +342,8 @@ p
 
 ``` r
 ## Let's plot the random pass we have compared to all other passes 
-p <- p + geom_segment(data = pass_to_plot_original, aes(x = location_2p.x, y = location_2p.y, xend = pass_end.location_2p.x, yend = pass_end.location_2p.y), size = 0.75, colour = "#D43B47") + geom_point(data = pass_to_plot_original, aes(x = location_2p.x, y = location_2p.y),colour = "#D43B47", size = 2) 
+p <- p + geom_segment(data = pass_to_plot_original, aes(x = location_2p.x, y = location_2p.y, xend = pass_end.location_2p.x, yend = pass_end.location_2p.y), size = 0.75, colour = "#D43B47") + 
+geom_point(data = pass_to_plot_original, aes(x = location_2p.x, y = location_2p.y),colour = "#D43B47", size = 2) 
 p
 ```
 
