@@ -12,8 +12,11 @@ A1. [Getting Started With StatsBomb Data](https://github.com/FCrSTATS/StatsBomb_
 
 ### B: The Basics 
 B1. [xG Tables and dplyr Package](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/2.xG&dplyr.md)
+
 B2. [Creating a Statsbomb Ready Pitch with ggplot2](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/2.CreateAPitchForStatsBomb.md)
+
 B3. [Creating a Statsbomb Ready Shot Map with ggplot2](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/3.CreateShotMaps.md)
+
 B4. [Plotting Shots with ggplot2](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/4.PlotingShots.md)
 
 ### C: Analysis 
