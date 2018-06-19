@@ -4,7 +4,7 @@ Building a 'Unique' Passing Model - Part 1 - Create the Underlying Mechanics
 The Concept
 -----
 
-You are watching a football match, possession is being circulated around the middle in unspectacular fashion. Then all of a sudden, your attacking midfielder (known for his vision) gets a moment of time and hits a great pass. You know it's a great pass, it's something different, yeah it's not normal, it's..... unique. 
+You are watching a football match, possession is being circulated in unspectacular fashion. Then all of a sudden, your attacking midfielder (known for his vision) gets a moment of time and hits a great pass. You know it's a great pass, it's something different, yeah it's not normal, it's..... unique. 
 
 ![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/pass.png)
 
