@@ -308,20 +308,12 @@ p
 ![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Unknown-9.png)
 
 ``` r
-## Let's plot all of the passes in grey as a background pattern 
-#p <- p + geom_segment(data = passes, aes(x = location_2p.x, y = location_2p.y, xend = pass_end.location_2p.x, yend = pass_end.location_2p.y), colour = "grey", size = 0.75, alpha = 0.05) + geom_point(data = passes, aes(x = location.x, y = location.y), colour = "grey", size = 2, alpha = 0.05) 
-p 
-```
-
-![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Unknown-10.png)
-
-``` r
 ## Let's plot all of the passes that are closst matches 
 p <- p + geom_segment(data = pass_to_plot, aes(x = location_2p.x, y = location_2p.y, xend = pass_end.location_2p.x, yend = pass_end.location_2p.y), size = 0.75, colour = "#ECAFB1") + geom_point(data = pass_to_plot, aes(x = location_2p.x, y = location_2p.y),colour = "#ECAFB1", size = 2) 
 p 
 ```
 
-![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Unknown-11.png)
+![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Unknown-10.png)
 
 ``` r
 ## Let's plot the random pass we have compared to all other passes 
@@ -329,7 +321,7 @@ p <- p + geom_segment(data = pass_to_plot_original, aes(x = location_2p.x, y = l
 p
 ```
 
-![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Unknown-12.png)
+![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Unknown-11.png)
 
 Other Examples
 --------------
