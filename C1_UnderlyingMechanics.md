@@ -339,3 +339,4 @@ So it seems we have managed to create a pass matching model via NN calculations!
 
 Part 2 coming soon!
 
+![StatsBomb Logo](https://github.com/statsbomb/open-data/blob/master/img/statsbomb-logo.jpg)
