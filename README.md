@@ -6,20 +6,17 @@ Statsbomb have made an initial release of 9 matches of their data, what makes it
 
 This git repo will explore this free data source as we attempt to help others learn data science and football analytics. 
 
-###A: Getting Started
+### A: Getting Started
 A1. [Getting Started With StatsBomb Data](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/1.GettingStartedWithStatsBombData.md)
 
 
-###B: The Basics 
+### B: The Basics 
 B1. [xG Tables and dplyr Package](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/2.xG&dplyr.md)
-
 B2. [Creating a Statsbomb Ready Pitch with ggplot2](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/2.CreateAPitchForStatsBomb.md)
-
 B3. [Creating a Statsbomb Ready Shot Map with ggplot2](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/3.CreateShotMaps.md)
-
 B4. [Plotting Shots with ggplot2](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/4.PlotingShots.md)
 
-###C: Analysis 
+### C: Analysis 
 C1. [Building a 'Unique' Passing Model - Part 1 - Create the Underlying Mechanics](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/C1_UnderlyingMechanics.md)
 
 
