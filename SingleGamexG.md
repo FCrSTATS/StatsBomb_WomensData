@@ -3,8 +3,9 @@ xG Timeline Plots
 
 xG Accumulative Charts
 ----------------------
+![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/xGaccum/Unknown-5.png)
 
-Expected Goals (xG) is a popularised metric for calculating the probabilty that a particular shot will be scored - explainer <https://www.bbc.co.uk/sport/football/40699431>. xG is a more reliable metric when assessed over seasons worth of data and single-game analysis using xG has huge weaknesses. However, single-game accumulative analysis has become popular, mainly because it shows a narrative of the match over time.
+Expected Goals (xG) is a popularised metric for calculating the probabilty that a particular shot will be scored - [more details](https://www.bbc.co.uk/sport/football/40699431). xG is a more reliable metric when assessed over seasons worth of data and single-game analysis using xG has huge weaknesses. However, single-game accumulative analysis has become popular, mainly because it shows a narrative of the match over time.
 
 Using Statsbomb free women's football data I will run through the code to create the xG Accumulative plots.
 
@@ -103,7 +104,7 @@ p <- ggplot()
 p
 ```
 
-![](SingleGamexG_files/figure-markdown_github/unnamed-chunk-5-1.png)
+![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/xGaccum/Unknown.png)
 
 #### Add Team 1 Data
 
@@ -112,7 +113,7 @@ p <- p + geom_step(data=T1_shotData, mapping=aes(x=Timer, y=xg_total), colour = 
 p
 ```
 
-![](SingleGamexG_files/figure-markdown_github/unnamed-chunk-6-1.png)
+![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/xGaccum/Unknown-1.png)
 
 #### Add Team 1 Data
 
@@ -121,7 +122,7 @@ p <- p + geom_step(data=T2_shotData, mapping=aes(x=Timer, y=xg_total), colour = 
 p
 ```
 
-![](SingleGamexG_files/figure-markdown_github/unnamed-chunk-7-1.png)
+![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/xGaccum/Unknown-2.png)
 
 #### Add the Goals
 
@@ -138,7 +139,7 @@ geom_point(data = T2_goals, aes(x=Timer, y=xg_total), colour = "black", size = 4
 p
 ```
 
-![](SingleGamexG_files/figure-markdown_github/unnamed-chunk-8-1.png)
+![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/xGaccum/Unknown-3.png)
 
 #### Labels, Theme & Legends
 
@@ -157,6 +158,6 @@ annotate("text", x = 0, y = (yMax[2] - (yMax[2]*0.05)), label = T1_label, hjust 
 annotate("text", x = 0, y = (yMax[2] - (yMax[2]*0.1)), label = T2_label, hjust = 0, colour = "#2B6DD2") + labs(x = "Minutes", y = "Accumulative xG") + theme_minimal()
 ```
 
-![](SingleGamexG_files/figure-markdown_github/unnamed-chunk-9-1.png)
+![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/xGaccum/Unknown-4.png)
 
 There are many ways to style these plots but the above code will get you to the final product for you to tweak further.. enjoy.
