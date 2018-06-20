@@ -19,6 +19,8 @@ B3. [Creating a Statsbomb Ready Shot Map with ggplot2](https://github.com/FCrSTA
 
 B4. [Plotting Shots with ggplot2](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/4.PlotingShots.md)
 
+B5. [Plotting Accumulative xG witgh ggplot2](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/B5.SingleGamexG.md)
+
 ### C: Analysis 
 C1. [Building a 'Unique' Passing Model - Part 1 - Create the Underlying Mechanics](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/C1_UnderlyingMechanics.md)
 
