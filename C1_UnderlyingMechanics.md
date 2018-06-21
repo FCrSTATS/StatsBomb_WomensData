@@ -207,22 +207,22 @@ theme_minimal()
 ``` r
 # Relationship between location.y and distance 
 ggplot(data = findings) + 
-geom_point(aes(x= location.x, y = Uniqueness), alpha = 0.3, colour = "#E24F55") + 
+geom_point(aes(x= pass.end_location.x, y = Uniqueness), alpha = 0.3, colour = "#E24F55") + 
 theme_minimal()
 ```
 
-![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Unknown-3.png)
+![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Rplot03.png)
 
 #### Pass Destination: location.y (Horizontal) & Uniqueness
 
 ``` r
 # Relationship between location.y and distance 
 ggplot(data = findings) + 
-geom_point(aes(x= Uniqueness, y = location.y), alpha = 0.3, colour = "#E24F55") + 
+geom_point(aes(x= Uniqueness, y = pass.end_location.y), alpha = 0.3, colour = "#E24F55") + 
 theme_minimal()
 ```
 
-![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Unknown-4.png)
+![](https://github.com/FCrSTATS/StatsBomb_WomensData/blob/master/images/passmodel1/Rplot04.png)
 
 #### Pass Angle & Uniqueness
 
